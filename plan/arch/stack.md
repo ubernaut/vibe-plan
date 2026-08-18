@@ -1,0 +1,1 @@
+#this file contains the perferred application stack  eg postgres/deno/react

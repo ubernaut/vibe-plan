@@ -1,0 +1,1 @@
+#this contains a lighter narrative summary of of the overarching dev log so it doesn't overwealm the context.  good to reference to see where we are at any point in time. 

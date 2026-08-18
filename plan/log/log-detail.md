@@ -1,0 +1,1 @@
+#this file contains every prompt, response, and strategy attempted in the course of development.  failed tests pivotes etc.  the purpose of this to to provide a detailed log so we do not retread any ground we have already tried.  this shuoldn't be read every single time as it will get huge. 
