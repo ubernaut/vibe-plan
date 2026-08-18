@@ -8,6 +8,9 @@ preserving.
 
 ## 2026-08-18
 
+- Added lightweight development-loop and trunk-based version-control guidance
+  under `plan/workflow/`.
+- Added a minimal reference example so Git preserves `plan/refs/`.
 - Added a root README explaining the planning framework.
 - Made routine context loading progressive instead of requiring every plan file.
 - Added minimal plan and task templates plus a threshold for task-file creation.

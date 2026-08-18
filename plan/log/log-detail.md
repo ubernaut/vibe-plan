@@ -65,3 +65,28 @@ Added `plan/arch/diagrams/README.md` and linked the directory from the framework
 guides. The convention favors inline Mermaid for simple diagrams, standalone
 editable sources for larger or reusable diagrams, and diagrams only when they
 clarify the design better than concise prose.
+
+### Prompt
+
+Add a workflow folder with `development.md` describing a typical workflow loop
+and `version-control.md` describing trunk-based Git development.
+
+### Response and strategy
+
+Added concise workflow documents covering orientation, outcome definition,
+investigation, implementation, verification, documentation reconciliation, and
+integration. Defined `main` as a releasable trunk, allowed direct commits for
+low-risk solo work when policy permits, and otherwise favored short-lived
+branches, frequent integration, focused commits, verification, and no force
+pushes to `main`. Linked the folder from the framework and agent instructions.
+
+### Prompt
+
+Add an example reference file so Git tracks the otherwise empty `plan/refs/`
+directory.
+
+### Response and strategy
+
+Added `plan/refs/_example.md` with a minimal source, relevance, and rationale
+format. Updated the framework guides and logs to identify it as a replaceable
+example rather than a required documentation artifact.

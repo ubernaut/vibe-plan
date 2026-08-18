@@ -26,10 +26,14 @@ plan/
 │   └── hiatus/             # Paused task files
 ├── test/
 │   └── test.md             # Test strategy and test plan
+├── workflow/
+│   ├── development.md      # Typical development loop
+│   └── version-control.md  # Trunk-based Git workflow
 ├── log/
 │   ├── log-summary.md      # Concise durable progress and decisions
 │   └── log-detail.md       # Complete prompt and development record
 └── refs/                   # External references, links, PDFs, and source material
+    └── _example.md         # Minimal reference template
 ```
 
 `AGENTS.md` contains repository instructions for compatible coding assistants.
@@ -56,6 +60,8 @@ plan/
    a targeted scan useful.
 7. Store supporting material in `plan/refs/` and link it from the plan or task
    that depends on it.
+8. Use the development and version-control workflows as defaults, adapting them
+   only when a repository-specific constraint requires it.
 
 The engineering principles in `plan/arch/best-practices.md` favor separation of
 concerns, clean interfaces, supported and well-established dependencies,
