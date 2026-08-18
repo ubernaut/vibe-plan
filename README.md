@@ -17,7 +17,8 @@ plan/
 ├── README.md               # Instructions for maintaining the planning files
 ├── arch/
 │   ├── best-practices.md   # Cross-cutting engineering principles
-│   └── stack.md            # Preferred application stack
+│   ├── stack.md            # Preferred application stack
+│   └── diagrams/           # Standalone architecture diagram sources
 ├── todo/
 │   ├── priority.md         # Ordered queue of open work
 │   ├── _template.md        # Minimal template for nontrivial tasks
@@ -67,6 +68,8 @@ Populate the planning framework in this order:
 1. Define the problem, users, scope, non-goals, and success criteria in
    `plan/plan.md`.
 2. Record the target architecture and dependency choices under `plan/arch/`.
+   Keep simple Mermaid diagrams inline and larger diagram sources in
+   `plan/arch/diagrams/`.
 3. Create independently verifiable task files for nontrivial work under
    `plan/todo/`.
 4. Order the active tasks in `plan/todo/priority.md`.

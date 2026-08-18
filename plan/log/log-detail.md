@@ -54,3 +54,14 @@ continuous detailed logging while excluding this file from routine context.
 The user then clarified that the LLM, rather than the user, should decide when a
 detailed-log scan is warranted. Replaced explicit user opt-in with selective,
 relevance-based scanning and a preference for targeted searches.
+
+### Prompt
+
+Add a diagrams folder under `plan/arch/` without making diagrams burdensome.
+
+### Response and strategy
+
+Added `plan/arch/diagrams/README.md` and linked the directory from the framework
+guides. The convention favors inline Mermaid for simple diagrams, standalone
+editable sources for larger or reusable diagrams, and diagrams only when they
+clarify the design better than concise prose.

@@ -14,3 +14,5 @@ preserving.
 - Defined lightweight current-versus-target and pruning conventions.
 - Kept detailed development logging continuous while making scans selective and
   LLM-directed rather than part of baseline context loading.
+- Added `arch/diagrams/` for standalone architecture diagram sources while
+  keeping simple diagrams inline and diagram creation optional.
