@@ -1,20 +1,58 @@
-#instructinos for LLM.  keep these files updated to match the current plan. when current state and target state do not match, call that out and identify discrepencies. 
+# Planning guide
 
-arch/ 
-best practices, detailed architecture diagrams and descriptions go in arch. 
+This directory holds the durable context needed to understand and continue the
+project. Keep it useful and small: record information only when it will affect
+future work or prevent a decision from being repeated.
 
-plan.md 
-the high level plan is found in plan.md.  this should be written by the user and only updated by the LLM with explicit permission. 
+## What to read
 
-todo/
-all individual tasks or efforts go into todo as their own file. when they are completed they move to todo/done. if they are put on hiatus we move them to todo/hiatus. 
+For every task, read:
 
-log/
-contains a detailed prompt/development log and a more manageable  narrative summary log 
+1. `plan.md` for scope and intended outcomes.
+2. `todo/priority.md` for the current order of work.
+3. The specific task file, when one exists.
 
-test/
-this should contain the test plan and test strategy
+Read relevant files from `arch/`, `test/`, `refs/`, and `log/log-summary.md` as
+needed. Do not load `log/log-detail.md` by default. The LLM should decide when
+the current task may benefit from prior attempts, failures, pivots, or unresolved
+work and scan the log then. Prefer targeted searches to reading the entire file.
+This reading rule does not make detailed logging optional.
 
-refs/
-this should contain reference material. pdfs, links etc. 
+## What belongs where
 
+- `plan.md`: user-owned scope, goals, non-goals, success criteria, and
+  high-level direction. An LLM may update it only with explicit permission.
+- `todo/priority.md`: a short, ordered list of the next actionable tasks.
+- `todo/`: one file for work that spans multiple steps or sessions, requires
+  meaningful decisions, or needs durable acceptance criteria. Handle small,
+  obvious changes directly without creating a task file.
+- `todo/done/`: completed task files worth retaining.
+- `todo/hiatus/`: paused task files that may be resumed.
+- `arch/`: cross-cutting architecture, stack choices, and decisions that affect
+  more than one task. Do not document implementation details already obvious
+  from the code.
+- `test/`: the shared test strategy and project-wide completion expectations.
+  Task-specific acceptance checks belong in the task file.
+- `log/log-summary.md`: concise durable progress, decisions, and pivots.
+- `log/log-detail.md`: the complete prompt and development record, including
+  responses, strategies, attempts, failures, and pivots. Keep it updated, but
+  scan it only when the LLM judges that its history may inform the current work.
+- `refs/`: reference material that is actually used; link each reference from
+  the plan or task that needs it.
+
+Use `todo/_template.md` when a task file is warranted. Delete unused template
+sections rather than filling them with boilerplate.
+
+## Current and target state
+
+When documentation describes a desired state that differs from the repository,
+add brief `Current state` and `Target state` sections to the relevant plan,
+architecture, or task file. Remove the distinction once the target is reached.
+Do not maintain a separate drift register.
+
+## Maintenance
+
+Update planning files in the same change that makes them inaccurate. Keep the
+priority list short. When work finishes or pauses, move its task file and remove
+it from the active queue. Delete obsolete references. Keep the detailed log as
+history; summarize its durable outcomes in the summary log.
