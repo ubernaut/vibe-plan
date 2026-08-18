@@ -10,6 +10,11 @@ preserving.
 
 - Added lightweight development-loop and trunk-based version-control guidance
   under `plan/workflow/`.
+- Added a pre-merge gate that deploys the pull-request revision to test
+  infrastructure and runs integrated tests before merging to `main`.
+- Defined the full branch loop: local development, upstream rebase and smoke
+  test, PR deployment and integration tests, then merge and production deploy;
+  failures return to branch development.
 - Added a minimal reference example so Git preserves `plan/refs/`.
 - Added a root README explaining the planning framework.
 - Made routine context loading progressive instead of requiring every plan file.

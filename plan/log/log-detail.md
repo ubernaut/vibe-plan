@@ -90,3 +90,31 @@ directory.
 Added `plan/refs/_example.md` with a minimal source, relevance, and rationale
 format. Updated the framework guides and logs to identify it as a replaceable
 example rather than a required documentation artifact.
+
+### Prompt
+
+Add a deploy-to-test-infrastructure and integrated-test step to the
+version-control workflow before merging back to `main`.
+
+### Response and strategy
+
+Made a deployment of the exact pull-request revision an explicit pre-merge
+gate. Integrated tests run against that deployment, failures block merging, and
+changes to the pull request require redeployment and affected-test reruns. Added
+cleanup and evidence guidance while keeping secrets and production data out of
+logs and artifacts.
+
+### Prompt
+
+Make the full version-control process a six-step loop: create a feature or bug
+branch from `main`, develop and test locally, rebase onto upstream changes and
+smoke-test, open a PR, deploy the branch for integrated testing, and merge plus
+deploy to production on success; return to development on failure.
+
+### Response and strategy
+
+Replaced the looser integration sequence with the requested canonical loop.
+Development directly on `main` is no longer part of the workflow. The tested PR
+revision must remain unchanged, successful integration testing gates the merge,
+production receives the merged `main` revision, and failures explicitly return
+the branch to local development before the entire validation path repeats.

@@ -23,8 +23,9 @@ important context.
 6. **Reconcile.** Update planning, architecture, testing, and workflow documents
    made inaccurate by the change. Maintain the detailed log and add only
    durable outcomes to the summary log.
-7. **Integrate.** Follow `version-control.md`, leave the worktree understandable,
-   and report the result, verification performed, and any remaining work.
+7. **Integrate.** Follow `version-control.md`, including its pre-merge PR
+   deployment and integrated-test gate. Leave the worktree understandable, and
+   report the result, verification performed, and any remaining work.
 
 If blocked, preserve the evidence and next useful action in the task or log. Do
 not add process artifacts when a concise note is enough.
