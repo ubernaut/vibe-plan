@@ -8,7 +8,7 @@ important context.
 1. **Orient.** Read `plan/README.md`, `plan/plan.md`, and
    `plan/todo/priority.md`, then load only the files relevant to the work.
    Inspect the live repository before relying on documentation. Scan the
-   detailed log when prior attempts may matter.
+   relevant branch detail logs when prior attempts may matter.
 2. **Define the outcome.** State what should be observably true when the work is
    complete. Create a task file only when the work is multi-step, spans
    sessions, or needs durable acceptance checks.
@@ -21,8 +21,8 @@ important context.
    project checks when the risk warrants them. Confirm task acceptance checks
    and inspect the final diff.
 6. **Reconcile.** Update planning, architecture, testing, and workflow documents
-   made inaccurate by the change. Maintain the detailed log and add only
-   durable outcomes to the summary log.
+   made inaccurate by the change. Maintain the current branch's detail log and
+   add only durable outcomes to the summary log.
 7. **Integrate.** Follow `version-control.md`, including its pre-merge PR
    deployment and integrated-test gate. Leave the worktree understandable, and
    report the result, verification performed, and any remaining work.

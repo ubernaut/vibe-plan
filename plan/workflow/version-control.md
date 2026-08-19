@@ -23,7 +23,8 @@ Use trunk-based development. `main` is the trunk and should remain releasable.
 
 1. **Branch from `main`.** Confirm the worktree state, update local knowledge of
    the remote, and create a short-lived `feature/` or `bug/` branch from current
-   `main`.
+   `main`. Start its detail log under `plan/log/detail/` using the branch-name
+   filename convention in `plan/README.md`.
 2. **Develop locally.** Work in that branch until the functionality is
    satisfactory locally. Keep commits focused and run the relevant local tests.
 3. **Reconcile with upstream.** Check for changes in `origin/main`. If it has
@@ -33,10 +34,11 @@ Use trunk-based development. `main` is the trunk and should remain releasable.
    checks pass, push it and open a pull request to `main`, or update the existing
    pull request when repeating the loop.
 5. **Test the deployed branch.** Deploy the exact pull-request revision to test
-   infrastructure and run the relevant integrated tests, including affected
+   infrastructure  and run the relevant integrated tests, including affected
    migrations, service boundaries, and external integrations. Prefer an
    isolated preview environment; when using shared infrastructure, identify the
    deployed revision and avoid colliding with other tests.
+   **Note:** This step is required only if a dedicated test environment exists.
 6. **Merge and deploy.** If integrated testing passes, merge the branch into
    `main`, deploy the merged `main` revision to production, confirm the trunk
    and deployment checks, then remove the test deployment and delete the

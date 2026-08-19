@@ -7,11 +7,13 @@ Before starting work, read:
 3. `plan/todo/priority.md`
 
 Then read only the task, workflow, architecture, test, reference, and summary-log
-files relevant to the work. Do not load `plan/log/log-detail.md` by default.
-Decide whether to scan it when the task may overlap prior attempts, failures,
-pivots, or unresolved work. Prefer a targeted search before reading the whole
-file.
+files relevant to the work. Do not load `plan/log/detail/` by default. Decide
+whether to scan branch logs when the task may overlap prior attempts, failures,
+pivots, or unresolved work. Prefer a targeted search before reading whole logs.
 
 Keep planning documents aligned with the implementation. Do not edit
-`plan/plan.md` without explicit user permission. Keep the detailed development
-log updated even though it is excluded from routine reading.
+`plan/plan.md` without explicit user permission. Keep the current branch's
+detailed development log updated even though branch logs are excluded from
+routine reading. Under `plan/log/detail/`, replace `/` in the branch name with
+`--` to form its filename; for example, `feature/login` uses
+`feature--login.md`.
