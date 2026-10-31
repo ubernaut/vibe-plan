@@ -31,7 +31,8 @@ plan/
 │   └── version-control.md  # Trunk-based Git workflow
 ├── log/
 │   ├── log-summary.md      # Concise durable progress and decisions
-│   └── log-detail.md       # Complete prompt and development record
+│   └── detail/             # One detailed development log per branch
+│       └── _template.md    # Minimal branch-log template
 └── refs/                   # External references, links, PDFs, and source material
     └── _example.md         # Minimal reference template
 ```
@@ -54,10 +55,10 @@ plan/
 5. Keep architecture, stack, and testing documents aligned with the actual
    implementation. Call out differences between the documented target and the
    current state.
-6. Capture durable progress and pivots in `plan/log/log-summary.md`, and keep
-   the prompt and development record in `plan/log/log-detail.md`. Maintaining
-   the detailed log is expected; the LLM decides when prior-work context makes
-   a targeted scan useful.
+6. Capture durable progress and pivots in `plan/log/log-summary.md`. Maintain a
+   separate prompt and development log for each branch under
+   `plan/log/detail/`; the LLM decides when prior branch context makes a
+   targeted scan useful.
 7. Store supporting material in `plan/refs/` and link it from the plan or task
    that depends on it.
 8. Use the development and version-control workflows as defaults, adapting them
@@ -81,5 +82,6 @@ Populate the planning framework in this order:
 4. Order the active tasks in `plan/todo/priority.md`.
 5. Define test levels, environments, acceptance criteria, and release gates in
    `plan/test/test.md`.
-6. Maintain both logs as implementation progresses. Do not load the detailed
-   log routinely; scan it when prior attempts may inform the current work.
+6. Maintain the summary and current branch's detailed log as implementation
+   progresses. Do not load branch logs routinely; scan them when prior attempts
+   may inform the current work.

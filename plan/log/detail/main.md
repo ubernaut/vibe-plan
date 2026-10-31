@@ -1,4 +1,7 @@
-# Detailed development log
+# Detailed development log: `main`
+
+- **Branch:** `main`
+- **Purpose:** Legacy history and work performed directly on `main`.
 
 Maintain a chronological record of prompts, responses, strategies, attempts,
 failures, and pivots throughout development. Logging is not optional.
@@ -118,3 +121,17 @@ Development directly on `main` is no longer part of the workflow. The tested PR
 revision must remain unchanged, successful integration testing gates the merge,
 production receives the merged `main` revision, and failures explicitly return
 the branch to local development before the entire validation path repeats.
+
+## 2026-08-19 — Branch-scoped detail logs
+
+### Prompt
+
+Replace the single monolithic detailed development log with one detailed log per
+branch to reduce merge conflicts.
+
+### Response and strategy
+
+Moved the existing history intact to `plan/log/detail/main.md`. Added a minimal
+branch-log template and changed the framework so each branch writes only to its
+own log. Branch names map to filenames by replacing `/` with `--`, preventing
+parallel feature and bug branches from editing the same detailed-log file.

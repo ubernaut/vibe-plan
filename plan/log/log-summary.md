@@ -6,6 +6,11 @@ resume the project. Do not duplicate task files, commit history, or routine chat
 Add dated entries in reverse chronological order when there is something worth
 preserving.
 
+## 2026-08-19
+
+- Replaced the monolithic detailed development log with one log per branch
+  under `plan/log/detail/` to reduce merge conflicts.
+
 ## 2026-08-18
 
 - Added lightweight development-loop and trunk-based version-control guidance
